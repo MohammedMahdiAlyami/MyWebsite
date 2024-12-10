@@ -1,0 +1,628 @@
+/* === الهيدر (Header) === */
+.header {
+  margin-top: 100px;  /* Space for the fixed Navbar */
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #000000;  /* Black background for Header */
+  color: white;  /* White text */
+}
+
+.header h1 {
+  font-size: 3rem;
+}
+
+.header p {
+  font-size: 1.25rem;
+  color: #ddd;
+}
+
+/* === Navbar === */
+.navbar {
+  z-index: 1000;
+  background-color: #000000;  /* Black background for Navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .nav-link {
+  margin-right: 15px;
+  font-weight: bold;
+  color: white; /* White text in the Navbar */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #457b9d;  /* Light Blue on hover */
+  text-decoration: underline;
+}
+
+/* === الصفحة الرئيسية (Home Section) === */
+.home-section {
+  height: 100vh;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.home-section h1 {
+  font-size: 3.5rem;
+}
+
+.home-section p {
+  font-size: 1.25rem;
+}
+
+/* === قسم الاتصال (Contact Section) === */
+.contact-section {
+  background-color: #ffffff;  /* White background for Contact */
+  padding: 50px 20px;
+  color: #333;  /* Dark text color */
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;  /* زيادة حجم العنوان */
+  color: #1e3c72;  /* تغيير لون العنوان */
+  font-weight: bold;
+  text-transform: uppercase;  /* تحويل النص إلى حروف كبيرة */
+  letter-spacing: 2px;  /* إضافة تباعد بين الحروف */
+  transition: all 0.3s ease;  /* إضافة تأثيرات للتحويل */
+}
+
+.contact-section h2:hover {
+  color: #ff5733;  /* تغيير اللون عند المرور بالماوس */
+  transform: scale(1.1);  /* تكبير العنوان قليلاً عند التمرير */
+}
+
+/* === باقي النصوص في قسم الاتصال === */
+.contact-section p,
+.contact-section li {
+  color: #333;  /* بقاء النص بلون أسود */
+}
+
+
+/* === الأقسام ذات الخلفية المخصصة === */
+.white-section {
+  margin-bottom: 50px;
+  padding: 50px 0;
+}
+
+.dark-white-section {
+  margin-bottom: 50px;
+  padding: 50px 0;
+}
+
+/* === قسم المؤهلات (Qualifications Section) === */
+.qualifications-section {
+  background-color: #ffffff;  /* خلفية بيضاء */
+  padding: 50px 20px;
+  color: #2a5298;  /* Dark Blue text */
+}
+
+.qualifications-section h2 {
+  font-size: 2.5rem;  /* زيادة حجم العنوان */
+  color: #1e3c72;  /* لون العنوان الداكن */
+  font-weight: bold;
+  text-transform: uppercase;  /* تحويل النص إلى حروف كبيرة */
+  letter-spacing: 2px;  /* تباعد بين الحروف */
+  transition: all 0.3s ease;  /* إضافة تأثيرات للتحويل */
+}
+
+.qualifications-section h2:hover {
+  color: #ff5733;  /* تغيير اللون عند المرور بالماوس */
+  transform: scale(1.1);  /* تكبير العنوان قليلاً عند التمرير */
+}
+
+
+/* === (certificates Section) === */
+.certificates-section {
+  padding: 50px 20px;
+  color: #2a5298;  /* Dark Blue text */
+}
+
+.certificates-section h2 {
+  font-size: 2.5rem;  /* زيادة حجم العنوان */
+  color: #1e3c72;  /* تغيير لون العنوان */
+  font-weight: bold;
+  text-transform: uppercase;  /* تحويل النص إلى حروف كبيرة */
+  letter-spacing: 2px;  /* إضافة تباعد بين الحروف */
+  transition: all 0.3s ease;  /* إضافة تأثيرات للتحويل */
+}
+
+.certificates-section h2:hover {
+  color: #ff5733;  /* تغيير اللون عند المرور بالماوس */
+  transform: scale(1.1);  /* تكبير العنوان قليلاً عند التمرير */
+}
+
+/* === التفاعل مع باقي النصوص === */
+.certificates-section p,
+.certificates-section li {
+  color: #333;  /* بقاء النص بلون أسود */
+}
+
+
+/* === (projects Section) === */
+.projects-section {
+  background-color: #ffffff;  /* خلفية بيضاء */
+  padding: 50px 20px;
+  color: #2a5298;  /* Dark Blue text */
+}
+
+.projects-section h2 {
+  font-size: 2.5rem;  /* حجم العنوان أكبر */
+  color: #1e3c72;  /* لون العنوان الداكن */
+  font-weight: bold;
+  text-transform: uppercase;  /* تحويل النص إلى حروف كبيرة */
+  letter-spacing: 2px;  /* تباعد بين الحروف */
+  transition: all 0.3s ease;  /* إضافة تأثيرات للتحويل */
+}
+
+.projects-section h2:hover {
+  color: #ff5733;  /* تغيير اللون عند المرور بالماوس */
+  transform: scale(1.1);  /* تكبير العنوان قليلاً عند التمرير */
+}
+
+/* === تخصيص مظهر البطاقة عند التمرير === */
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* === تخصيص مظهر العنوان داخل كل بطاقة === */
+.card-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #2a5298;  /* Dark Blue color for titles */
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555;  /* Darker color for the description */
+}
+
+/* === تخصيص أزرار المشاريع === */
+.btn-primary {
+  background-color: #1d3557;
+  border-color: #1d3557;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  background-color: #457b9d;
+  border-color: #457b9d;
+}
+
+
+/* === (experiences Section) === */
+.experience-section {
+  background-color: #ffffff;  /* خلفية بيضاء */
+  padding: 50px 20px;
+  color: #2a5298;  /* Dark Blue text */
+}
+
+.experience-section h2 {
+  font-size: 2.5rem;  /* زيادة حجم العنوان */
+  color: #1e3c72;  /* اللون الغامق للعناوين */
+  font-weight: bold;
+  text-transform: uppercase;  /* تحويل النص إلى حروف كبيرة */
+  letter-spacing: 2px;  /* إضافة تباعد بين الحروف */
+  transition: all 0.3s ease;  /* إضافة تأثيرات للتحويل */
+}
+
+.experience-section h2:hover {
+  color: #ff5733;  /* تغيير اللون عند المرور بالماوس */
+  transform: scale(1.1);  /* تكبير العنوان قليلاً عند التمرير */
+}
+
+/* === تنسيق البطاقة عند التمرير === */
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* === تخصيص مظهر العنوان داخل كل بطاقة === */
+.card-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #2a5298;
+}
+
+.card-subtitle {
+  font-size: 1rem;
+  color: #90bfed;  /* Light Blue for the period */
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555;  /* Darker color for description */
+}
+
+/* === زر عام (Buttons) === */
+.btn {
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: #1d3557;
+  border-color: #1d3557;
+}
+
+.btn-primary:hover {
+  background-color: #457b9d;
+  border-color: #457b9d;
+}
+
+/* === (about Section) === */
+.about-section {
+  padding: 50px 20px;
+  color: #2a5298;  /* Dark Blue text for the rest of the section */
+}
+
+.about-section h2 {
+  font-size: 2.5rem;  /* Larger font size for the title */
+  color: #1e3c72;   /* Dark blue color for the title */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.about-section h2:hover {
+  color: #ff5733; /* Change color when hovered */
+  transform: scale(1.1); /* Slightly increase size when hovered */
+}
+
+/* === Keep the rest of the text black === */
+.about-section p,
+.about-section li {
+  color: #333;  /* Keep the rest of the text black */
+}
+
+
+/* التفاعل عند التمرير فوق البطاقة */
+.qualification-card {
+  background-color: #2a5298;
+  color: white;
+  border: none;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.qualification-card:hover {
+  transform: scale(1.05);  /* Slightly scale up the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* Add shadow on hover */
+}
+
+.qualification-title {
+  font-size: 1.50rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.qualification-period {
+  font-size: 1rem;
+  color: #90bfed;  /* Light blue color for the period */
+}
+
+.qualification-description {
+  font-size: 0.9rem;
+  color: #000000;
+}
+
+/* === قسم المهارات (Skills Section) === */
+.skills-section h2 {
+  font-size: 2.5rem;  /* زيادة حجم الخط للعناوين */
+  color: #1e3c72;   /* اللون الغامق للعناوين */
+  font-weight: bold;
+  text-transform: uppercase; /* تحويل النص إلى حروف كبيرة */
+  letter-spacing: 2px; /* تباعد بين الحروف */
+  transition: all 0.3s ease; /* إضافة تأثيرات للتحويل */
+}
+
+.skills-section h2:hover {
+  color: #ff5733;  /* تغيير اللون عند المرور بالماوس */
+  transform: scale(1.1);  /* تكبير العنوان قليلاً عند التمرير */
+}
+
+/* === (home Section) === */
+.home-section h2 {
+  font-size: 2.5rem;  /* زيادة حجم الخط للعناوين */
+  letter-spacing: 2px; /* تباعد بين الحروف */
+  transition: all 0.3s ease; /* إضافة تأثيرات للتحويل */
+}
+
+.home-section h2:hover {
+  color: #ff5733;  /* تغيير اللون عند المرور بالماوس */
+  transform: scale(1.1);  /* تكبير العنوان قليلاً عند التمرير */
+}
+
+/* === (timeline Section) === */
+.timeline-section h2 {
+  font-size: 2.5rem;  /* زيادة حجم الخط للعناوين */
+  color: #1e3c72;   /* اللون الغامق للعناوين */
+  font-weight: bold;
+  text-transform: uppercase; /* تحويل النص إلى حروف كبيرة */
+  letter-spacing: 2px; /* تباعد بين الحروف */
+  transition: all 0.3s ease; /* إضافة تأثيرات للتحويل */
+}
+
+.timeline-section h2:hover {
+  color: #ff5733;  /* تغيير اللون عند المرور بالماوس */
+  transform: scale(1.1);  /* تكبير العنوان قليلاً عند التمرير */
+}
+
+
+
+/* === زر عام (Buttons) === */
+.btn {
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: #1d3557;
+  border-color: #1d3557;
+}
+
+.btn-primary:hover {
+  background-color: #457b9d;
+  border-color: #457b9d;
+}
+
+
+/* === Footer === */
+.footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+.footer p {
+  color: #333;
+}
+
+.footer a {
+  color: #1861ae;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* === تأثير العنوان (h1) === */
+h1.text-light {
+  font-size: 3.5rem; /* حجم الخط */
+  color: #ffffff;  /* اللون الأساسي (أبيض) */
+  font-weight: bold;  /* سمك الخط */
+  text-align: center;  /* محاذاة النص في المنتصف */
+  transition: all 0.3s ease;  /* تأثير التحويل عند التمرير */
+}
+
+h1.text-light:hover {
+  color: #ff5733;  /* تغيير اللون عند المرور بالماوس (لون برتقالي فاتح) */
+  transform: scale(1.1);  /* تكبير العنوان عند التمرير */
+}
+
+/* === تأثير النص (p) === */
+.text-description {
+  font-size: 1.5rem; /* حجم الخط */
+  color: #ffffff;  /* اللون الأساسي */
+  text-align: center; /* محاذاة النص في المنتصف */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.text-description:hover {
+  color: #ff5733;  /* تغيير اللون عند المرور بالماوس */
+  transform: scale(1.05);  /* تكبير النص عند التمرير */
+}
+
+/* === تأثير الأزرار === */
+.hover-btn {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hover-btn:hover {
+  transform: translateY(-5px);  /* تحريك الزر عند المرور بالماوس */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);  /* إضافة ظل عند التمرير */
+}
+
+/* تخصيص الأزرار */
+.btn-dark {
+  background-color: #333;  /* خلفية داكنة */
+}
+
+.btn-dark:hover {
+  background-color: #444;  /* خلفية داكنة أكثر عند التمرير */
+}
+
+.btn-primary {
+  background-color: #007bff;  /* اللون الأزرق */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;  /* الأزرق الداكن عند التمرير */
+}
+
+/* تخصيص تنسيق صورة البروفايل */
+img.rounded-circle {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 5px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img.rounded-circle:hover {
+  transform: scale(1.05);  /* تكبير الصورة عند التمرير */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* تعزيز تأثير الظل عند التمرير */
+}
+
+/* تخصيص تنسيق النصوص في القسم */
+h1.text-light {
+  font-size: 3.5rem;
+  color: #ffffff;
+}
+
+p.text-light {
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+.timeline-section {
+  background-color: #f8f9fa;
+}
+
+.timeline-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.custom-border {
+  border: 2px solid var(--bs-light-border-subtle); /* إطار بلون خفيف */
+  border-radius: 5px; /* حواف مستديرة */
+  padding: 10px 20px;
+}
+
+.custom-border:hover {
+  box-shadow: 0 0 10px var(--bs-light-border-subtle); /* تأثير توهج عند التمرير */
+}
+
+/* === تخصيص شريط التقدم عند التمرير عليه === */
+.progress-bar {
+  transition: all 0.3s ease-in-out;  /* إضافة تأثير سلس عند التفاعل */
+}
+
+.progress-bar:hover {
+  background-color: #4caf50;  /* تغيير اللون إلى أخضر عند التمرير */
+  transform: scale(1.05);  /* تكبير شريط التقدم قليلاً عند التمرير */
+}
+
+/* === تخصيص العناوين عند التمرير عليها === */
+.skills-section h5 {
+  transition: color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+.skills-section h5:hover {
+  color: #4caf50;  /* تغيير اللون إلى أخضر */
+  transform: scale(1.05);  /* تكبير العنوان قليلاً عند التمرير */
+}
+
+/* === تخصيص النص عند التمرير فوقه === */
+.skills-section .progress-bar-label {
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.skills-section .progress-bar:hover .progress-bar-label {
+  color: #fff;  /* تغيير النص إلى الأبيض عند التمرير */
+}
+
+/* تخصيص البطاقة عند التمرير عليها */
+.certificate-card {
+  transition: all 0.3s ease-in-out;  /* إضافة تأثير سلس عند التفاعل */
+  border: 1px solid #ddd;  /* إضافة حدود خفيفة للبطاقة */
+}
+
+.certificate-card:hover {
+  background-color: #f8f9fa;  /* تغيير الخلفية إلى لون فاتح عند التمرير */
+  transform: scale(1.05);  /* تكبير البطاقة قليلاً عند التمرير */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);  /* إضافة ظل حول البطاقة */
+}
+
+.certificate-card:hover .card-title {
+  color: #007bff;  /* تغيير لون العنوان إلى الأزرق عند التمرير */
+}
+
+.certificate-card:hover .card-subtitle {
+  color: #007bff;  /* تغيير لون الفترة إلى الأزرق عند التمرير */
+}
+
+/* تخصيص البطاقة عند التمرير عليها */
+.qualification-card {
+  transition: all 0.3s ease-in-out;  /* إضافة تأثير سلس عند التفاعل */
+  border: 1px solid #ddd;  /* إضافة حدود خفيفة للبطاقة */
+}
+
+.qualification-card:hover {
+  background-color: #f8f9fa;  /* تغيير الخلفية إلى لون فاتح عند التمرير */
+  transform: scale(1.05);  /* تكبير البطاقة قليلاً عند التمرير */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);  /* إضافة ظل حول البطاقة */
+}
+
+.qualification-card:hover .qualification-title {
+  color: #007bff;  /* تغيير لون العنوان إلى الأزرق عند التمرير */
+}
+
+.qualification-card:hover .qualification-period {
+  color: #007bff;  /* تغيير لون الفترة إلى الأزرق عند التمرير */
+}
+
+/* تخصيص البطاقة عند التمرير عليها */
+.experience-card {
+  transition: all 0.3s ease-in-out;  /* إضافة تأثير سلس عند التفاعل */
+  border: 1px solid #ddd;  /* إضافة حدود خفيفة للبطاقة */
+}
+
+.experience-card:hover {
+  background-color: #f8f9fa;  /* تغيير الخلفية إلى لون فاتح عند التمرير */
+  transform: scale(1.05);  /* تكبير البطاقة قليلاً عند التمرير */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);  /* إضافة ظل حول البطاقة */
+}
+
+.experience-card:hover .experience-title {
+  color: #007bff;  /* تغيير لون العنوان إلى الأزرق عند التمرير */
+}
+
+.experience-card:hover .experience-period {
+  color: #007bff;  /* تغيير لون الفترة إلى الأزرق عند التمرير */
+}
+
+/* تخصيص البطاقة عند التمرير عليها */
+.project-card {
+  transition: all 0.3s ease-in-out;  /* إضافة تأثير سلس عند التفاعل */
+  border: 1px solid #ddd;  /* إضافة حدود خفيفة للبطاقة */
+}
+
+.project-card:hover {
+  background-color: #f8f9fa;  /* تغيير الخلفية إلى لون فاتح عند التمرير */
+  transform: scale(1.05);  /* تكبير البطاقة قليلاً عند التمرير */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);  /* إضافة ظل حول البطاقة */
+}
+
+.project-card:hover .project-title {
+  color: #007bff;  /* تغيير لون العنوان إلى الأزرق عند التمرير */
+}
+
+.project-card:hover .project-description {
+  color: #555;  /* تغيير لون النص إلى لون داكن أكثر عند التمرير */
+}
+
+.project-card .project-button:hover {
+  background-color: #0056b3;  /* تغيير لون الزر عند التمرير عليه */
+}
+
+.white-section, .dark-white-section {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.white-section, .dark-white-section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
