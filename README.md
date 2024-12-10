@@ -1,4 +1,4 @@
-**Project Description: MyProfile Resume Platform**
+**Mohammed Alyami: MyProfile Resume Platform**
 
 **Project Idea:**  
 The MyProfile project is a dynamic and unique online platform designed using the React.js library. The platform aims to display resumes in a professional and easy-to-navigate way, with a focus on important details such as skills, certifications, experience, projects, and contact information.
