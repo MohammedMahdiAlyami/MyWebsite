@@ -1,53 +1,65 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
+import { LanguageContext } from '../contexts/LanguageContext'; // استيراد السياق
 
 const Experience = () => {
-  const experiences = [
-    {
-      title: "Software Developer at Alhamrani Universal",
-      period: "07/2023 - Present",
-      description: (
-        <>
-          - Develop software solutions for ATMs and KIOSKs, ensuring high performance and reliability.
-          <br />
-          - Gather customer requirements to tailor software solutions that meet specific needs.
-          <br />
-          - Integrate and test end-to-end software solutions to ensure seamless operation and customer satisfaction.
-          <br />
-          - Utilize technologies including HTML, CSS, JavaScript, C# and Java for front-end and back-end development.
-        </>
-      ),
+  const { language } = useContext(LanguageContext); // استخدام السياق للحصول على اللغة الحالية
+
+  const content = {
+    en: {
+      title: "My Professional Experience",
+      experiences: [
+        {
+          title: "Software Developer at Alhamrani Universal",
+          period: "07/2023 - Present",
+          description: (
+            <>
+              - Develop software solutions for ATMs and KIOSKs, ensuring high performance and reliability.
+              <br />
+              - Gather customer requirements to tailor software solutions that meet specific needs.
+              <br />
+              - Integrate and test end-to-end software solutions to ensure seamless operation and customer satisfaction.
+              <br />
+              - Utilize technologies including HTML, CSS, JavaScript, C# and Java for front-end and back-end development.
+            </>
+          ),
+        },
+      ],
     },
-    // {
-    //   title: "Web Application Development Camp at Tuwaiq Academy",
-    //   period: "04/2023 - 06/2023",
-    //   description: (
-    //     <>
-    //       - Completed an intensive web development camp with Java for two months (~200 hours).
-    //       <br />
-    //       - Focused on Java-based web application development using the Spring Boot framework, including backend integration.
-    //     </>
-    //   ),
-    // },
-    // {
-    //   title: "English Language Intensive Program",
-    //   period: "01/2015 - 12/2015",
-    //   description: (
-    //     <>
-    //       - Studied English Language intensively at the University of Bridgeport in the USA for one year.
-    //       <br />
-    //       - Enhanced communication and technical writing skills in a professional environment.
-    //     </>
-    //   ),
-    // },
-  ];
+    ar: {
+      title: "خبراتي المهنية",
+      experiences: [
+        {
+          title: "مطور برمجيات في شركة الحمراني العالمي",
+          period: "07/2023 - الآن",
+          description: (
+            <>
+              - تطوير حلول برمجية لـ ATMs و KIOSKs لضمان الأداء العالي والموثوقية.
+              <br />
+              - جمع متطلبات العملاء لإنشاء حلول برمجية مخصصة تلبي الاحتياجات المحددة.
+              <br />
+              - دمج واختبار حلول البرمجيات من البداية إلى النهاية لضمان التشغيل السلس ورضا العملاء.
+              <br />
+              - استخدام تقنيات مثل HTML و CSS و JavaScript و C# و Java لتطوير الواجهات الأمامية والخلفية.
+            </>
+          ),
+        },
+      ],
+    },
+  };
+
+  const selectedContent = content[language]; // اختيار المحتوى بناءً على اللغة
 
   return (
-    <section id="experience" className="experience-section py-5 text-bg-light">
+    <section
+      id="experience"
+      className="experience-section py-5 text-bg-light"
+      dir={language === 'ar' ? 'rtl' : 'ltr'} // ضبط اتجاه النصوص حسب اللغة
+    >
       <Container>
-        <h2 className="text-center mb-4">My Professional Experience</h2>
+        <h2 className="text-center mb-4">{selectedContent.title}</h2>
         <Row className="justify-content-center">
-          {experiences.map((exp, index) => (
+          {selectedContent.experiences.map((exp, index) => (
             <Col md={8} lg={6} key={index}>
               <Card className="h-100 experience-card">
                 <Card.Body>

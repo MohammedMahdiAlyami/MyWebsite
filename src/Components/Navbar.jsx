@@ -1,8 +1,41 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { FaGithub, FaLinkedin } from 'react-icons/fa'; // استيراد الأيقونات
+import { LanguageContext } from './contexts/LanguageContext'; // استيراد السياق
 
 function App() {
+  const { language } = useContext(LanguageContext); // استخدام السياق للحصول على اللغة
+
+  // محتوى النصوص باللغتين
+  const content = {
+    en: {
+      home: "Home",
+      about: "About",
+      journey: "Timeline",
+      qualifications: "Qualifications",
+      certificates: "Certificates",
+      experience: "Experience",
+      skills: "Skills",
+      projects: "Projects",
+      contact: "Contact",
+      cv: "Download CV",
+    },
+    ar: {
+      home: "الرئيسية",
+      about: "عنّي",
+      journey: "السيرة المهنية",
+      qualifications: "المؤهلات",
+      certificates: "الشهادات",
+      experience: "الخبرات",
+      skills: "المهارات",
+      projects: "المشاريع",
+      contact: "اتصل بي",
+      cv: "تحميل السيرة الذاتية",
+    },
+  };
+
+  const selectedContent = content[language]; // اختيار المحتوى بناءً على اللغة
+
   return (
     <>
       {/* Navbar ثابت */}
@@ -12,15 +45,15 @@ function App() {
           <Navbar.Toggle aria-controls="navbar-nav" />
           <Navbar.Collapse id="navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#about">About</Nav.Link>
-              <Nav.Link href="#journey">Timeline</Nav.Link>
-              <Nav.Link href="#qualifications">Qualifications</Nav.Link>
-              <Nav.Link href="#certificates">Certificates</Nav.Link>
-              <Nav.Link href="#experience">Experience</Nav.Link>
-              <Nav.Link href="#skills">Skills</Nav.Link>
-              <Nav.Link href="#projects">Projects</Nav.Link>
-              <Nav.Link href="#contact">Contact</Nav.Link>
+              <Nav.Link href="#home">{selectedContent.home}</Nav.Link>
+              <Nav.Link href="#about">{selectedContent.about}</Nav.Link>
+              <Nav.Link href="#journey">{selectedContent.journey}</Nav.Link>
+              <Nav.Link href="#qualifications">{selectedContent.qualifications}</Nav.Link>
+              <Nav.Link href="#certificates">{selectedContent.certificates}</Nav.Link>
+              <Nav.Link href="#experience">{selectedContent.experience}</Nav.Link>
+              <Nav.Link href="#skills">{selectedContent.skills}</Nav.Link>
+              <Nav.Link href="#projects">{selectedContent.projects}</Nav.Link>
+              <Nav.Link href="#contact">{selectedContent.contact}</Nav.Link>
             </Nav>
 
             {/* زر تحميل CV */}
@@ -30,7 +63,7 @@ function App() {
               rel="noopener noreferrer"
               className="btn btn-primary ms-3" // تنسيق Bootstrap
             >
-              Download CV
+              {selectedContent.cv}
             </a>
 
             {/* إضافة أيقونات GitHub و LinkedIn على اليمين */}
@@ -45,31 +78,31 @@ function App() {
       </Navbar>
 
       {/* الأقسام مع الـ id المناسب */}
-      <div id="home" className="dark-white-section">
+      <div id="home" className="dark-white-section" dir={language === 'ar' ? 'rtl' : 'ltr'}>
         <Home />
       </div>
-      <div id="about" className="white-section">
+      <div id="about" className="white-section" dir={language === 'ar' ? 'rtl' : 'ltr'}>
         <About />
       </div>
-      <div id="journey" className="dark-white-section">
+      <div id="journey" className="dark-white-section" dir={language === 'ar' ? 'rtl' : 'ltr'}>
         <Timeline />
       </div>
-      <div id="qualifications" className="white-section">
+      <div id="qualifications" className="white-section" dir={language === 'ar' ? 'rtl' : 'ltr'}>
         <Qualifications />
       </div>
-      <div id="certificates" className="dark-white-section">
+      <div id="certificates" className="dark-white-section" dir={language === 'ar' ? 'rtl' : 'ltr'}>
         <Certificates />
       </div>
-      <div id="Experience" className="white-section">
+      <div id="experience" className="white-section" dir={language === 'ar' ? 'rtl' : 'ltr'}>
         <Experience />
       </div>
-      <div id="skills" className="dark-white-section">
+      <div id="skills" className="dark-white-section" dir={language === 'ar' ? 'rtl' : 'ltr'}>
         <Skills />
       </div>
-      <div id="projects" className="white-section">
+      <div id="projects" className="white-section" dir={language === 'ar' ? 'rtl' : 'ltr'}>
         <Projects />
       </div>
-      <div id="contact" className="dark-white-section">
+      <div id="contact" className="dark-white-section" dir={language === 'ar' ? 'rtl' : 'ltr'}>
         <Contact />
       </div>
     </>

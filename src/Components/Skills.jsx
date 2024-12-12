@@ -1,99 +1,72 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Container, Row, Col, ProgressBar } from 'react-bootstrap';
+import { LanguageContext } from '../contexts/LanguageContext'; // استيراد السياق
 
 const Skills = () => {
+  const { language } = useContext(LanguageContext); // استخدام السياق للحصول على اللغة الحالية
+
+  // محتوى النصوص باللغتين
+  const content = {
+    en: {
+      title: "My Skills",
+      skills: [
+        { name: "HTML & CSS", level: 95 },
+        { name: "Bootstrap", level: 75 },
+        { name: "JavaScript", level: 75 },
+        { name: "React.js", level: 75 },
+        { name: "Java", level: 85 },
+        { name: "Spring Boot", level: 85 },
+        { name: "Python", level: 70 },
+        { name: "SQL", level: 90 },
+        { name: "MySQL", level: 90 },
+        { name: "PostgreSQL", level: 85 },
+        { name: "Web Services", level: 80 },
+        { name: "Web Design", level: 90 },
+        { name: "Restful APIs", level: 85 },
+        { name: "Data Analysis", level: 85 },
+        { name: "Customer Support", level: 95 },
+        { name: "Troubleshooting", level: 85 },
+        { name: "Communication", level: 95 },
+        { name: "Microsoft Office", level: 100 },
+      ],
+    },
+    ar: {
+      title: "مهاراتي",
+      skills: [
+        { name: "HTML و CSS", level: 95 },
+        { name: "Bootstrap", level: 75 },
+        { name: "JavaScript", level: 75 },
+        { name: "React.js", level: 75 },
+        { name: "Java", level: 85 },
+        { name: "Spring Boot", level: 85 },
+        { name: "Python", level: 70 },
+        { name: "SQL", level: 90 },
+        { name: "MySQL", level: 90 },
+        { name: "PostgreSQL", level: 85 },
+        { name: "Web Services", level: 80 },
+        { name: "Web Design", level: 90 },
+        { name: "Restful APIs", level: 85 },
+        { name: "Data Analysis", level: 85 },
+        { name: "Customer Support", level: 95 },
+        { name: "Troubleshooting", level: 85 },
+        { name: "Communication", level: 95 },
+        { name: "Microsoft Office", level: 100 },
+      ],
+    },
+  };
+
+  const selectedContent = content[language]; // اختيار المحتوى بناءً على اللغة
+
   return (
-    <Container className="mt-5 mb-5 skills-section">
-      <h2 className="text-center">My Skills</h2>
+    <Container className="mt-5 mb-5 skills-section" dir={language === 'ar' ? 'rtl' : 'ltr'}>
+      <h2 className="text-center">{selectedContent.title}</h2>
       <Row className="mt-4">
-        <Col md={6}>
-          <h5>HTML & CSS</h5>
-          <ProgressBar now={95} label="95%" />
-        </Col>
-        <Col md={6}>
-          <h5>Bootstrap</h5>
-          <ProgressBar now={75} label="75%" />
-        </Col>
-      </Row>
-      <Row className="mt-4">
-        <Col md={6}>
-          <h5>JavaScript</h5>
-          <ProgressBar now={75} label="75%" />
-        </Col>
-        <Col md={6}>
-          <h5>React.js</h5>
-          <ProgressBar now={75} label="75%" />
-        </Col>
-      </Row>
-      <Row className="mt-4">
-        <Col md={6}>
-          <h5>Java</h5>
-          <ProgressBar now={85} label="85%" />
-        </Col> 
-        <Col md={6}>
-          <h5>Spring Boot</h5>
-          <ProgressBar now={85} label="85%" />
-        </Col>
-      </Row>
-      <Row className="mt-4">
-        <Col md={6}>
-          <h5>Python</h5>
-          <ProgressBar now={70} label="70%" />
-        </Col> 
-        <Col md={6}>
-          <h5>SQL</h5>
-          <ProgressBar now={90} label="90%" />
-        </Col>
-      </Row>
-      <Row className="mt-4">
-        <Col md={6}>
-          <h5>MySQL</h5>
-          <ProgressBar now={90} label="90%" />
-        </Col> 
-        <Col md={6}>
-          <h5>PostgreSQL</h5>
-          <ProgressBar now={85} label="85%" />
-        </Col>
-      </Row>
-      <Row className="mt-4">
-        <Col md={6}>
-          <h5>Web Services</h5>
-          <ProgressBar now={80} label="80%" />
-        </Col>
-        <Col md={6}>
-          <h5>Web Design</h5>
-          <ProgressBar now={90} label="90%" />
-        </Col>
-      </Row>
-      <Row className="mt-4">
-        <Col md={6}>
-          <h5>Restful APIs</h5>
-          <ProgressBar now={85} label="85%" />
-        </Col>
-        <Col md={6}>
-          <h5>Data Analysis</h5>
-          <ProgressBar now={85} label="85%" />
-        </Col>
-      </Row>
-      <Row className="mt-4">
-        <Col md={6}>
-          <h5>Customer Support</h5>
-          <ProgressBar now={95} label="95%" />
-        </Col>
-        <Col md={6}>
-          <h5>Troubleshooting</h5>
-          <ProgressBar now={85} label="85%" />
-        </Col>
-      </Row>
-      <Row className="mt-4">
-        <Col md={6}>
-          <h5>Communication</h5>
-          <ProgressBar now={95} label="95%" />
-        </Col>
-        <Col md={6}>
-          <h5>Microsoft Office</h5>
-          <ProgressBar now={100} label="100%" />
-        </Col>
+        {selectedContent.skills.map((skill, index) => (
+          <Col md={6} key={index} className="mb-4"> {/* إضافة مساحة بين الأعمدة */}
+            <h5>{skill.name}</h5>
+            <ProgressBar now={skill.level} label={`${skill.level}%`} />
+          </Col>
+        ))}
       </Row>
     </Container>
   );
