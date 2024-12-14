@@ -179,7 +179,7 @@ const Certificates = () => {
       <Row className="gy-4 d-flex align-items-stretch">
         {certificates.map((certificate, index) => (
           <Col md={4} key={index}>
-            <Card className="certificate-card h-100 shadow-sm border-0">
+            <Card className="certificate-card h-100 shadow-lg border rounded-3 p-3">
               <Card.Body>
                 <Card.Title>{language === 'en' ? certificate.title.en : certificate.title.ar}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
