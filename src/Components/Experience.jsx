@@ -11,16 +11,19 @@ const Experience = () => {
       experiences: [
         {
           title: "Software Developer at Alhamrani Universal",
+          locationLabel: "Location:",
+          location: "Riyadh, Saudi Arabia",
+          periodLabel: "Period:",
           period: "07/2023 - Present",
           description: (
             <>
-              - Develop software solutions for ATMs and KIOSKs, ensuring high performance and reliability.
+              - Develop software solutions for ATMs and KIOSKs for banks, ensuring high performance and reliability.
               <br />
               - Gather customer requirements to tailor software solutions that meet specific needs.
               <br />
               - Integrate and test end-to-end software solutions to ensure seamless operation and customer satisfaction.
               <br />
-              - Utilize technologies including HTML, CSS, JavaScript, C# and Java for front-end and back-end development.
+              - Utilize programming languages including HTML, CSS, JavaScript, C#, and Java for front-end and back-end development.
             </>
           ),
         },
@@ -31,16 +34,19 @@ const Experience = () => {
       experiences: [
         {
           title: "مطور برمجيات في شركة الحمراني العالمية",
+          locationLabel: "الموقع:",
+          location: "الرياض، المملكة العربية السعودية",
+          periodLabel: "الفترة:",
           period: "07/2023 - الآن",
           description: (
             <>
-              - تطوير حلول برمجية لـ ATMs و KIOSKs لضمان الأداء العالي والموثوقية.
+              - تطوير حلول البرمجيات لأجهزة الصراف الآلي وأجهزة الخدمة الذاتية للبنوك، مع ضمان الأداء العالي والموثوقية.
               <br />
               - جمع متطلبات العملاء لإنشاء حلول برمجية مخصصة تلبي الاحتياجات المحددة.
               <br />
               - دمج واختبار حلول البرمجيات من البداية إلى النهاية لضمان التشغيل السلس ورضا العملاء.
               <br />
-              - استخدام تقنيات مثل HTML و CSS و JavaScript و C# و Java لتطوير الواجهات الأمامية والخلفية.
+              - استخدام لغات البرمجة مثل HTML وCSS وJavaScript وC# وJava لتطوير الواجهات الأمامية والخلفية.
             </>
           ),
         },
@@ -60,11 +66,19 @@ const Experience = () => {
         <h2 className="text-center mb-4">{selectedContent.title}</h2>
         <Row className="justify-content-center">
           {selectedContent.experiences.map((exp, index) => (
-            <Col md={8} lg={6} key={index}>
-              <Card className="h-100 experience-card">
+            <Col md={8} lg={6} key={index} className="mb-4">
+              <Card className="experience-card shadow-lg border-0 rounded-3 p-4 hover-effect">
                 <Card.Body>
-                  <Card.Title className="experience-title">{exp.title}</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted experience-period">{exp.period}</Card.Subtitle>
+                  <Card.Title className="experience-title fw-bold">{exp.title}</Card.Title>
+                  {/* الموقع */}
+                  <Card.Text className="mb-1 fw-semibold">
+                    {exp.locationLabel} {exp.location}
+                  </Card.Text>
+                  {/* الفترة */}
+                  <Card.Text className="text-muted mb-3">
+                    {exp.periodLabel} {exp.period}
+                  </Card.Text>
+                  {/* الوصف */}
                   <Card.Text>{exp.description}</Card.Text>
                 </Card.Body>
               </Card>

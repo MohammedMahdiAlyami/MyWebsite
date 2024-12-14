@@ -58,10 +58,10 @@ const Qualifications = () => {
         <Row>
           {selectedContent.qualifications.map((qual, index) => (
             <Col md={4} key={index} className="mb-4">
-              <Card className="h-100 shadow-sm qualification-card hover-effect">
+              <Card className="qualification-card h-100 shadow-lg border-0 rounded-3 p-4 hover-effect">
                 <Card.Body>
                   <Card.Title className="qualification-title">{qual.title}</Card.Title>
-                  <Card.Subtitle className="mb-2 qualification-period">{qual.period}</Card.Subtitle>
+                  <Card.Subtitle className="mb-2 qualification-period text-muted">{qual.period}</Card.Subtitle>
                   <Card.Text className="qualification-description">{qual.description}</Card.Text>
                 </Card.Body>
               </Card>

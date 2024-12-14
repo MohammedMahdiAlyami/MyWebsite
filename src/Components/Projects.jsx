@@ -11,17 +11,18 @@ const Projects = () => {
       title: "My Projects",
       projects: [
         {
-          title: "Parking Spot Booking Website",
+          title: "Parking Spot Booking System",
           description: (
             <>
-              - This application is built using the Spring Boot framework with dependencies such as Spring Web, Validation, Lombok, Spring Data JPA, MySQL Driver, and Spring Security.
+              - This system is built using the Spring Boot framework with dependencies such as Spring Web, Validation, Lombok, Spring Data JPA, MySQL Driver, and Spring Security.
               <br />
               - It integrates a MySQL database and employs JPA relationships to manage data effectively.
               <br />
               - A real-time scheduling algorithm ensures efficient bookings and seamless updates, cancellations, check-ins, and check-outs.
               <br />
               - The system supports over 43 API endpoints, enabling companies to manage branches and parking spots, customers to handle accounts and bookings, and includes comprehensive testing with JUnit5.
-              <br /><br /></>
+              <br /><br />
+            </>
           ),
           link: "https://github.com/MohammedAjaji/Parking",
         },
@@ -38,7 +39,7 @@ const Projects = () => {
               - Used SQLite as an internal database to save Human Resources Managers and employees' data.
             </>
           ),
-          link: "#",
+          link: "https://github.com/MohammedMahdiAlyami/Human-Resources-Management-System",
         },
         {
           title: "React-Flask Authentication System",
@@ -61,17 +62,18 @@ const Projects = () => {
       title: "مشاريعي",
       projects: [
         {
-          title: "موقع حجز مواقف السيارات",
+          title: "نظام حجز مواقف السيارات",
           description: (
             <>
-              - تم بناء هذا التطبيق باستخدام إطار عمل Spring Boot مع الاعتماد على Spring Web، Validation، Lombok، Spring Data JPA، MySQL Driver، وSpring Security.
+              - تم بناء هذا النظام باستخدام إطار عمل Spring Boot مع الاعتماد على Spring Web، Validation، Lombok، Spring Data JPA، MySQL Driver، وSpring Security.
               <br />
               - يتكامل مع قاعدة بيانات MySQL ويستخدم علاقات JPA لإدارة البيانات بكفاءة.
               <br />
               - يضمن خوارزمية جدولة في الوقت الفعلي حجوزات فعالة وتحديثات وإلغاءات وتسجيل دخول ومغادرة بسلاسة.
               <br />
               - يدعم النظام أكثر من 43 نقطة API، مما يتيح للشركات إدارة الفروع والمواقف، وللعملاء إدارة الحسابات والحجوزات، مع اختبارات شاملة باستخدام JUnit5.
-              <br /><br /></>
+              <br /><br />
+            </>
           ),
           link: "https://github.com/MohammedAjaji/Parking",
         },
@@ -88,7 +90,7 @@ const Projects = () => {
               - استخدمت قاعدة بيانات SQLite لحفظ بيانات الموظفين ومديري الموارد البشرية.
             </>
           ),
-          link: "#",
+          link: "https://github.com/MohammedMahdiAlyami/Human-Resources-Management-System",
         },
         {
           title: "نظام توثيق باستخدام React و Flask",
@@ -118,12 +120,10 @@ const Projects = () => {
         <Row>
           {selectedContent.projects.map((project, index) => (
             <Col md={4} key={index} className="mb-4">
-              <Card className="h-100 shadow-sm d-flex flex-column project-card">
+              <Card className="h-100 shadow-sm project-card rounded-3">
                 <Card.Body className="d-flex flex-column">
-                  <div>
-                    <Card.Title className="text-dark project-title">{project.title}</Card.Title>
-                    <Card.Text className="text-muted project-description">{project.description}</Card.Text>
-                  </div>
+                  <Card.Title className="text-dark project-title fw-bold">{project.title}</Card.Title>
+                  <Card.Text className="text-muted project-description">{project.description}</Card.Text>
                   <div className="mt-auto">
                     <Button
                       variant="primary"
