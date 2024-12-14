@@ -10,8 +10,8 @@ const About = () => {
       title: "About Me",
       intro: "My name is Mohammed Alyami. I hold a Bachelor's Degree in Software Engineering, specializing in Computer Programming, with a G.P.A of 4.84 out of 5 (Excellent), and I graduated with a First Honor Degree from Technical and Vocational Training Corporation. Additionally, I earned a Diploma in Computer Programming from the same college.",
       englishProgram: "I also completed an intensive English Language program at the University of Bridgeport in the USA, where I studied for one year. Moreover, I participated in the Web Application Development Camp with Java at Tuwaiq Academy, completing about 200 hours over two months.",
-      skills: "My technical expertise includes programming languages like HTML, CSS, JavaScript, Java, and Python, along with database management skills in SQL, MySQL, and PostgreSQL. I am also skilled in web design and development.",
-      currentWork: "Currently, I work as a Software Developer at Alhamrani Universal, where I serve as a Professional Services Engineer. My role focuses on developing software solutions for KIOSKs, ATMs, tellers, and middleware systems for banks and various financial institutions.",
+      skills: "My technical expertise includes programming languages such as HTML, CSS, JavaScript, Java, Python and C#, along with database management skills in SQL, MySQL, and PostgreSQL. Additionally, I am proficient in web design and development.",
+      currentWork: "Currently, I work as a Software Developer at Alhamrani Universal, serving as a Professional Services Engineer. My role involves developing software solutions for kiosks, ATMs, tellers, and middleware systems for banks and other financial institutions.",
       responsibilities: [
         // "Developing software solutions for ATMs and KIOSKs to ensure high performance and reliability.",
         // "Gathering customer requirements to create tailored software solutions that meet specific needs.",
@@ -24,8 +24,8 @@ const About = () => {
       title: "نبذة عنّي",
       intro: "اسمي محمد اليامي. حاصل على شهادة البكالوريوس في هندسة البرمجيات، تخصص في برمجيات الحاسب، بمعدل 4.84 من 5 (ممتاز)، وقد تخرجت بدرجة الشرف الأولى من المؤسسة العامة للتدريب التقني والمهني. بالإضافة إلى ذلك، حصلت على دبلوم في برمجيات الحاسب من نفس الكلية.",
       englishProgram: "كما أكملت برنامجًا مكثفًا لتعلم اللغة الإنجليزية في جامعة بريدجبورت بالولايات المتحدة الأمريكية، حيث درست لمدة عام. علاوة على ذلك، شاركت في معسكر تطوير تطبيقات الويب باستخدام Java في أكاديمية طويق، وأكملت حوالي 200 ساعة خلال شهرين.",
-      skills: "تشمل خبراتي التقنية لغات البرمجة مثل HTML وCSS وJavaScript وJava وPython، إلى جانب مهارات إدارة قواعد البيانات في SQL وMySQL وPostgreSQL. أنا أيضًا ماهر في تصميم وتطوير الويب.",
-      currentWork: "حاليًا، أعمل كمطور برمجيات في شركة الحمراني العالمي، حيث أعمل كمهندس خدمات احترافية. يركز دوري على تطوير حلول برمجيات لـ KIOSKs وATMs وأنظمة الوسطاء لمختلف المؤسسات والبنوك المالية.",
+      skills: "تشمل خبراتي التقنية لغات البرمجة مثل HTML وCSS وJavaScript وJava وPython وC#، بالإضافة إلى مهارات إدارة قواعد البيانات في SQL وMySQL وPostgreSQL. بالإضافة إلى ذلك، أنا ماهر في تصميم وتطوير الويب.",
+      currentWork: "حاليًا، أعمل كمطور برمجيات في شركة الحمراني العالمية، وأشغل منصب مهندس خدمات احترافية. تتضمن مهامي تطوير حلول برمجية لأجهزة الخدمة الذاتية، والصرافات الآلية، وأجهزة الصرافين، وأنظمة الوسيط للبنوك والمؤسسات المالية المختلفة.",
       responsibilities: [
         // "تطوير حلول برمجية لـ ATMs وKIOSKs لضمان الأداء العالي والموثوقية.",
         // "جمع متطلبات العملاء لإنشاء حلول برمجية مخصصة تلبي الاحتياجات المحددة.",

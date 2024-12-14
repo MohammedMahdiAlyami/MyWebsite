@@ -14,10 +14,14 @@ const Projects = () => {
           title: "Parking Spot Booking Website",
           description: (
             <>
-              - The backend APIs for the 'ParKing' parking spot booking website provide a set of functionalities to manage various aspects of the system.
+              - This application is built using the Spring Boot framework with dependencies such as Spring Web, Validation, Lombok, Spring Data JPA, MySQL Driver, and Spring Security.
               <br />
-              - These APIs, developed using Java and the Spring Boot framework, allow users to register and authenticate as either a company or a customer.
-            </>
+              - It integrates a MySQL database and employs JPA relationships to manage data effectively.
+              <br />
+              - A real-time scheduling algorithm ensures efficient bookings and seamless updates, cancellations, check-ins, and check-outs.
+              <br />
+              - The system supports over 43 API endpoints, enabling companies to manage branches and parking spots, customers to handle accounts and bookings, and includes comprehensive testing with JUnit5.
+              <br /><br /></>
           ),
           link: "https://github.com/MohammedAjaji/Parking",
         },
@@ -60,10 +64,14 @@ const Projects = () => {
           title: "موقع حجز مواقف السيارات",
           description: (
             <>
-              - واجهات برمجة التطبيقات (APIs) الخلفية لموقع "مواقف سيارات" توفر مجموعة من الوظائف لإدارة جوانب مختلفة من النظام.
+              - تم بناء هذا التطبيق باستخدام إطار عمل Spring Boot مع الاعتماد على Spring Web، Validation، Lombok، Spring Data JPA، MySQL Driver، وSpring Security.
               <br />
-              - تتيح هذه الواجهات للمستخدمين التسجيل والتوثيق سواء كانوا شركات أو عملاء، وتم تطويرها باستخدام Java وSpring Boot.
-            </>
+              - يتكامل مع قاعدة بيانات MySQL ويستخدم علاقات JPA لإدارة البيانات بكفاءة.
+              <br />
+              - يضمن خوارزمية جدولة في الوقت الفعلي حجوزات فعالة وتحديثات وإلغاءات وتسجيل دخول ومغادرة بسلاسة.
+              <br />
+              - يدعم النظام أكثر من 43 نقطة API، مما يتيح للشركات إدارة الفروع والمواقف، وللعملاء إدارة الحسابات والحجوزات، مع اختبارات شاملة باستخدام JUnit5.
+              <br /><br /></>
           ),
           link: "https://github.com/MohammedAjaji/Parking",
         },

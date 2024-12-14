@@ -9,8 +9,8 @@ const Certificates = () => {
   const certificates = [
     {
       title: {
-        en: "Dynamic and Interactive Website Building and Development Program Using React Js",
-        ar: "برنامج بناء وتطوير المواقع الديناميكية والتفاعلية باستخدام React Js"
+        en: "Dynamic and Interactive Website Building and Development Using React Js",
+        ar: " بناء وتطوير المواقع الديناميكية والتفاعلية باستخدام React Js"
       },
       period: {
         en: "12/2024",
@@ -18,11 +18,11 @@ const Certificates = () => {
       },
       description: {
         en: "Completed the Dynamic and Interactive Website Building and Development Program Using React Js program from Tuwaiq Academy.",
-        ar: "أكملت برنامج بناء وتطوير المواقع التفاعلية والديناميكية باستخدام React Js من أكاديمية طويق."
+        ar: "أكملت برنامج بناء وتطوير المواقع الديناميكية والتفاعلية باستخدام React Js من أكاديمية طويق."
       },
       hours: {
-        en: " 30 hours",
-        ar: " 30 ساعة"
+        en: " 45 hours",
+        ar: " 45 ساعة"
       },
     },
     {
@@ -36,7 +36,7 @@ const Certificates = () => {
       },
       description: {
         en: "Completed the Large Language Models Practitioner Certificate from SDAIA.",
-        ar: "أكملت شهادة ممارس النماذج اللغوية الكبيرة من SDAIA."
+        ar: "أكملت شهادة ممارس النماذج اللغوية الكبيرة LLMs من سدايا."
       },
       hours: {
         en: " 40 hours",

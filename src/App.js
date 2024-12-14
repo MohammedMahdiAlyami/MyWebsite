@@ -77,7 +77,7 @@ function AppContent() {
 
       {/* Footer Section */}
       <footer className="footer bg-secondary text-center py-4 mt-5">
-        <p className="text-white">&copy; {new Date().getFullYear()} {language === 'en' ? 'My Profile. All rights reserved.' : 'ملفي الشخصي. جميع الحقوق محفوظة.'}</p>
+        <p className="text-white">&copy; {new Date().getFullYear()} {language === 'en' ? 'Mohammed Alyami. All rights reserved.' : 'محمد اليامي. جميع الحقوق محفوظة'}</p>
         <p>
           <a href="https://www.linkedin.com/in/mohammed-mahdi-alyami" target="_blank" rel="noopener noreferrer" className="text-light mx-3">
             LinkedIn

@@ -72,12 +72,14 @@ const Home = () => {
             <a
               href="https://github.com/MohammedMahdiAlyami"
               className="btn btn-dark btn-lg me-3 hover-btn"
+              target="_blank"
             >
               {selectedContent.github}
             </a>
             <a
               href="https://www.linkedin.com/in/mohammed-mahdi-alyami"
               className="btn btn-primary btn-lg hover-btn"
+              target="_blank"
             >
               {selectedContent.linkedin}
             </a>
