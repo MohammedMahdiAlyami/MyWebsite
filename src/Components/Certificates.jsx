@@ -9,8 +9,8 @@ const Certificates = () => {
   const certificates = [
     {
       title: {
-        en: "Dynamic and Interactive Website Building and Development Using React Js",
-        ar: " بناء وتطوير المواقع الديناميكية والتفاعلية باستخدام React Js"
+        en: "Dynamic and Interactive Website Development Using React Js",
+        ar: "تطوير المواقع الديناميكية والتفاعلية باستخدام React Js"
       },
       period: {
         en: "12/2024",
