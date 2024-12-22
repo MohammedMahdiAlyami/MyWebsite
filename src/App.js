@@ -12,6 +12,8 @@ import Timeline from './Components/Timeline';
 import { LanguageContext, LanguageProvider } from './contexts/LanguageContext'; // استيراد السياق
 
 import './App.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 function AppContent() {
   const { language, toggleLanguage } = useContext(LanguageContext); // استخدام السياق
@@ -79,22 +81,22 @@ function AppContent() {
       <footer className="footer bg-secondary text-center py-4 mt-5">
         <p className="text-white">&copy; {new Date().getFullYear()} {language === 'en' ? 'Mohammed Alyami. All rights reserved.' : 'محمد اليامي. جميع الحقوق محفوظة'}</p>
         <p>
-          <a href="https://www.linkedin.com/in/mohammed-mahdi-alyami" target="_blank" rel="noopener noreferrer" className="text-light mx-3">
-            LinkedIn
+        <a href="https://www.linkedin.com/in/mohammed-mahdi-alyami" target="_blank" rel="noopener noreferrer" className="text-light mx-3">
+          <i className="fab fa-linkedin fa-lg"></i>
           </a>
-          |
+          <span className="text-light mx-2">|</span>
           <a href="https://github.com/MohammedMahdiAlyami" target="_blank" rel="noopener noreferrer" className="text-light mx-3">
-            GitHub
-          </a>
-          |
-          <a href="mailto:ghib34@gmail.com" className="text-light mx-3">
-            Email
-          </a>
-        </p>
-      </footer>
-    </>
-  );
-}
+            <i className="fab fa-github fa-lg"></i>
+            </a>
+            <span className="text-light mx-2">|</span>
+            <a href="mailto:ghib34@gmail.com" className="text-light mx-3">
+              <i className="fas fa-envelope fa-lg"></i>
+              </a>
+            </p>
+          </footer>
+        </>
+      );
+    }
 
 function App() {
   return (

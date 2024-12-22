@@ -41,7 +41,7 @@ function App() {
       {/* Navbar ثابت */}
       <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
         <Container>
-          <Navbar.Brand href="#home">MyProfile</Navbar.Brand>
+          <Navbar.Brand href="#home">MyWibsite</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbar-nav" />
           <Navbar.Collapse id="navbar-nav">
             <Nav className="ms-auto">
