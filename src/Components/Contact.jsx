@@ -1,31 +1,8 @@
-import React, { useRef, useContext } from 'react';
+import React, { useContext } from 'react';
 import { LanguageContext } from '../contexts/LanguageContext'; // استيراد السياق
-import emailjs from 'emailjs-com';
 
 const Contact = () => {
-  const form = useRef();
   const { language } = useContext(LanguageContext); // استخدام السياق للحصول على اللغة الحالية
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        'service_riqowg9', // Service ID
-        'template_xxx', // استخدم Template ID الخاص بك من EmailJS
-        form.current,
-        'your_user_id' // ضع الـ User ID الخاص بك من EmailJS
-      )
-      .then(
-        (result) => {
-          alert('Message Sent Successfully!');
-        },
-        (error) => {
-          console.error('Error:', error); // طباعة الخطأ في الـ Console
-          alert('Failed to send message, please try again.');
-        }
-      );
-  };
 
   const content = {
     en: {
@@ -41,21 +18,30 @@ const Contact = () => {
       email: "البريد الإلكتروني",
       message: "الرسالة",
       sendButton: "إرسال",
-    }
+    },
   };
 
   const selectedContent = content[language]; // اختيار المحتوى بناءً على اللغة
+
+  const handleSend = (e) => {
+    e.preventDefault();
+
+    // جلب القيم من الحقول
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const message = e.target.message.value;
+
+    // إنشاء رابط mailto مع البيانات المرسلة
+    const mailtoLink = `mailto:ghib34@gmail.com?subject=Message from ${name}&body=Email: ${email}%0D%0A%0D%0A${message}`;
+    window.location.href = mailtoLink; // فتح رابط mailto
+  };
 
   return (
     <div className="container mt-5 contact-section" dir={language === 'ar' ? 'rtl' : 'ltr'}>
       <h2 className="text-center contact-title">{selectedContent.title}</h2>
       <form
-        action="mailto:ghib34@gmail.com" // بريدك الإلكتروني
-        method="post"
-        encType="text/plain" // نوع الترميز
         className="contact-form mt-4"
-        ref={form}
-        onSubmit={sendEmail}
+        onSubmit={handleSend} // استدعاء دالة الإرسال
       >
         <div className="mb-3">
           <label className="form-label">{selectedContent.name}</label>
